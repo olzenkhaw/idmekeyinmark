@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         idMe Key In Ulasan Guru Tingkatan
+// @name         idMe Key In Ulasan PBD Guru Tingkatan
 // @namespace    http://tampermonkey.net/
 // @version      2024-07-10
 // @description  Ulasan Guru Tingkatan PBD IDME
