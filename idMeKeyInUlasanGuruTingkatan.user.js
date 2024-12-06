@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         idMe Key in Ulasan Guru Tingkatan
+// @name         Ulasan Guru Tingkatan Peperiksaan IDME
 // @namespace    http://tampermonkey.net/
 // @version      2024-07-09
 // @description  Ulasan Guru Tingkatan IDME
@@ -96,7 +96,7 @@ async function startfill()
         else
             ulasan(document.getElementsByClassName("w-textarea__textarea")[0],`Anda pasti berjaya sekiranya anda berusaha bersungguh-sungguh kerana anda memiliki potensi yang sangat baik. Tingkatkan usaha untuk mencapai kejayaan.`);
         document.getElementsByClassName("w-button primary--bg size--md ml1 ml1")[0].click();
-        await delay(2000);
+        await delay(1000);
         document.getElementsByClassName("swal2-confirm swal2-styled")[0].click();
         await delay(500);
     }
