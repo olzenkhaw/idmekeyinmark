@@ -152,7 +152,7 @@ async function startfill()
             document.getElementsByClassName("w-icon fa fa-pencil-square-o center")[i].click();
             await delay(500);
             // click kategori (cemerlang: total, sederhana: total+1, leamah: total+2)
-            if (data[i]>=50)
+            if (data[i]>=parseInt(document.getElementById('tp5').value))
                 document.getElementsByClassName("w-radio__input primary")[total].click();
             else
                 document.getElementsByClassName("w-radio__input primary")[total+1].click();
