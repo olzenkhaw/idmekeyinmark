@@ -130,19 +130,30 @@ async function startfill()
     }
     let usaha = document.getElementsByClassName("w-select__selection");
     if (confirm("Click all Usaha Murid?")) {
+        let u=document.querySelectorAll('[name*="w-select--"]');
         for (let i=0,j=0; i<usaha.length; i+=2,j++)
         {
-            usaha[i].click();
-            await delay(500);
-            if(data[j]>=parseInt(document.getElementById('tp5').value))
-                document.getElementsByClassName("w-list__item-label")[0].dispatchEvent(new Event('mousedown', {bubbles: true})); // sangat tinggi
-            else if(data[j]>=parseInt(document.getElementById('tp4').value))
-                document.getElementsByClassName("w-list__item-label")[1].dispatchEvent(new Event('mousedown', {bubbles: true})); // tinggi
-            else
-                document.getElementsByClassName("w-list__item-label")[2].dispatchEvent(new Event('mousedown', {bubbles: true})); // sederhana
-            await delay(500);
-            usaha[i].click();
-            await delay(500);
+            if(data[j]>=parseInt(document.getElementById('tp5').value)){
+                if (u[i].value != "1") {
+                    usaha[i].click(); await delay(200);
+                    document.getElementsByClassName("w-list__item-label")[0].dispatchEvent(new Event('mousedown', {bubbles: true})); // sangat tinggi
+                    await delay(200);usaha[i].click(); await delay(200);
+                }
+            }
+            else if(data[j]>=parseInt(document.getElementById('tp4').value)) {
+                if (u[i].value != "2") {
+                    usaha[i].click(); await delay(200);
+                    document.getElementsByClassName("w-list__item-label")[1].dispatchEvent(new Event('mousedown', {bubbles: true})); // tinggi
+                    await delay(200);usaha[i].click(); await delay(200);
+                }
+            }
+            else {
+                if (u[i].value != "3") {
+                    usaha[i].click(); await delay(200);
+                    document.getElementsByClassName("w-list__item-label")[2].dispatchEvent(new Event('mousedown', {bubbles: true})); // sederhana
+                    await delay(200);usaha[i].click(); await delay(200);
+                }
+            }
         }
     }
     if (confirm("Click all Ulasan Guru?")) {
