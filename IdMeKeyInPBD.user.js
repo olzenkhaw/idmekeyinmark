@@ -135,14 +135,11 @@ async function startfill()
             usaha[i].click();
             await delay(500);
             if(data[j]>=parseInt(document.getElementById('tp5').value))
-                if (usaha[i].value != "SANGAT TINGGI")
-                    document.getElementsByClassName("w-list__item-label")[0].dispatchEvent(new Event('mousedown', {bubbles: true})); // sangat tinggi
+                document.getElementsByClassName("w-list__item-label")[0].dispatchEvent(new Event('mousedown', {bubbles: true})); // sangat tinggi
             else if(data[j]>=parseInt(document.getElementById('tp4').value))
-                if (usaha[i].value != "TINGGI")
-                    document.getElementsByClassName("w-list__item-label")[1].dispatchEvent(new Event('mousedown', {bubbles: true})); // tinggi
+                document.getElementsByClassName("w-list__item-label")[1].dispatchEvent(new Event('mousedown', {bubbles: true})); // tinggi
             else
-                if (usaha[i].value != "SEDERHANA")
-                    document.getElementsByClassName("w-list__item-label")[2].dispatchEvent(new Event('mousedown', {bubbles: true})); // sederhana
+                document.getElementsByClassName("w-list__item-label")[2].dispatchEvent(new Event('mousedown', {bubbles: true})); // sederhana
             await delay(500);
             usaha[i].click();
             await delay(500);
