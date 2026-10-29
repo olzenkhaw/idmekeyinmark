@@ -135,23 +135,23 @@ async function startfill()
         {
             if(data[j]>=parseInt(document.getElementById('tp5').value)){
                 if (u[i].value != "1") {
-                    usaha[i].click(); await delay(200);
+                    usaha[i].click(); await delay(300);
                     document.getElementsByClassName("w-list__item-label")[0].dispatchEvent(new Event('mousedown', {bubbles: true})); // sangat tinggi
-                    await delay(200);usaha[i].click(); await delay(200);
+                    await delay(300);usaha[i].click(); await delay(300);
                 }
             }
             else if(data[j]>=parseInt(document.getElementById('tp4').value)) {
                 if (u[i].value != "2") {
-                    usaha[i].click(); await delay(200);
+                    usaha[i].click(); await delay(300);
                     document.getElementsByClassName("w-list__item-label")[1].dispatchEvent(new Event('mousedown', {bubbles: true})); // tinggi
-                    await delay(200);usaha[i].click(); await delay(200);
+                    await delay(300);usaha[i].click(); await delay(300);
                 }
             }
             else {
                 if (u[i].value != "3") {
                     usaha[i].click(); await delay(200);
                     document.getElementsByClassName("w-list__item-label")[2].dispatchEvent(new Event('mousedown', {bubbles: true})); // sederhana
-                    await delay(200);usaha[i].click(); await delay(200);
+                    await delay(300);usaha[i].click(); await delay(300);
                 }
             }
         }
@@ -161,16 +161,16 @@ async function startfill()
         {
             // click ulasan guru icon
             document.getElementsByClassName("w-icon fa fa-pencil-square-o center")[i].click();
-            await delay(500);
+            await delay(300);
             // click kategori (cemerlang: total, sederhana: total+1, leamah: total+2)
             if (data[i]>=parseInt(document.getElementById('tp5').value))
                 document.getElementsByClassName("w-radio__input primary")[total].click();
             else
                 document.getElementsByClassName("w-radio__input primary")[total+1].click();
-            await delay(500);
+            await delay(300);
             // click folder ulasan
             document.getElementsByClassName("w-icon fa fa-folder-open mr1")[0].click();
-            await delay(500);
+            await delay(300);
             // click ulasan pilih button
             const ulasantp3 = [0, 2, 6];
             if (data[i]>=parseInt(document.getElementById('tp5').value))
@@ -179,10 +179,10 @@ async function startfill()
                 document.getElementsByClassName("w-button primary--bg size--md my1 my1")[4].click(); // pilih ke-5
             else
                 document.getElementsByClassName("w-button primary--bg size--md my1 my1")[ulasantp3[Math.floor(Math.random() * ulasantp3.length)]].click(); // pilih ke-1,3,7
-            await delay(500);
+            await delay(300);
             // click simpan
             document.getElementsByClassName("w-button primary--bg size--md ml1 ml1")[0].click();
-            await delay(500);
+            await delay(300);
         }
     }
 }
